@@ -13,7 +13,13 @@ async function getWeather() {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   try {
-    resultDiv.innerHTML = `<p class="text-gray-200 animate-pulse">Loading...</p>`;
+    resultDiv.innerHTML = `
+  <div class="flex flex-col items-center gap-2">
+    <div class="w-10 h-10 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
+    <p class="text-white/80 text-sm">Fetching weather data...</p>
+  </div>
+`;
+
 
     const response = await fetch(url);
 
@@ -52,3 +58,10 @@ function displayWeather(data) {
   console.log(data);
   
 }
+
+document.getElementById("city").addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    getWeather();
+  }
+});
+
