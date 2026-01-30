@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+   
+    body {
+      background-image: url('360_F_261556117_pUFmcC1KA9igbzTS4QWoRtd3oZQnAHSq.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen text-white">
+
+  <div class="bg-white/20 backdrop-blur-lg p-8 rounded-2xl shadow-2xl w-96 text-center border border-white/30">
+    <h1 class="text-3xl font-bold mb-6 drop-shadow-md">🌤 Weather App</h1>
+
+    <div class="flex items-center gap-2 mb-6 bg-white/30 backdrop-blur-md p-2 rounded-lg shadow-md">
+      <input
+        type="text"
+        id="city"
+        placeholder="Enter city name"
+        class="flex-grow p-2 rounded-lg text-gray-900 bg-transparent placeholder-gray-700 focus:outline-none"
+      />
+      <button
+        id="getWeather"
+        class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-semibold text-white transition duration-300"
+      >
+        Search
+      </button>
+    </div>
+
+    <div id="result" class="text-lg space-y-2"></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
