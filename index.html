@@ -7,38 +7,90 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-   
     body {
-      background-image: url('360_F_261556117_pUFmcC1KA9igbzTS4QWoRtd3oZQnAHSq.jpg');
+      background-image:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('360_F_261556117_pUFmcC1KA9igbzTS4QWoRtd3oZQnAHSq.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      height: 100vh;
     }
   </style>
+  
 </head>
 
-<body class="flex items-center justify-center min-h-screen text-white">
+<body class="min-h-screen flex items-center justify-center text-white">
 
-  <div class="bg-white/20 backdrop-blur-lg p-8 rounded-2xl shadow-2xl w-96 text-center border border-white/30">
-    <h1 class="text-3xl font-bold mb-6 drop-shadow-md">🌤 Weather App</h1>
+  
+  <div class="w-full max-w-lg">
 
-    <div class="flex items-center gap-2 mb-6 bg-white/30 backdrop-blur-md p-2 rounded-lg shadow-md">
-      <input
-        type="text"
-        id="city"
-        placeholder="Enter city name"
-        class="flex-grow p-2 rounded-lg text-gray-900 bg-transparent placeholder-gray-700 focus:outline-none"
-      />
-      <button
-        id="getWeather"
-        class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-semibold text-white transition duration-300"
-      >
-        Search
-      </button>
+   
+    <div class="text-center mb-6">
+      <h1 class="text-4xl font-extrabold tracking-wide">
+        Weather<span class="text-blue-400">Now</span>
+      </h1>
+      <p class="text-sm text-white/80 mt-1">
+        Accurate. Fast. Real-time weather updates.
+      </p>
     </div>
 
-    <div id="result" class="text-lg space-y-2"></div>
+   
+    <div class="bg-white/20 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/30 p-8">
+
+    
+      <div class="mb-6">
+        <label class="block text-sm text-white/80 mb-2">
+          Search city weather
+        </label>
+
+        <div class="flex items-center gap-3 bg-white/30 rounded-xl p-3">
+          <input
+            type="text"
+            id="city"
+            placeholder="Enter city name"
+            class="flex-1 bg-transparent outline-none text-white placeholder-white/70"
+          />
+
+          <button
+            id="getWeather"
+            class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-xl font-semibold transition-all duration-300 shadow-lg"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+
+     
+      <div
+        id="result"
+        class="text-center space-y-3 transition-all duration-300"
+      ></div>
+
+   
+      <div class="my-6 border-t border-white/30"></div>
+
+      
+      <div class="grid grid-cols-3 gap-4 text-center text-sm text-white/80">
+        <div>
+          <p class="font-semibold text-white">Live Data</p>
+          <p>Real-time API</p>
+        </div>
+        <div>
+          <p class="font-semibold text-white">Global</p>
+          <p>Worldwide cities</p>
+        </div>
+        <div>
+          <p class="font-semibold text-white">Accurate</p>
+          <p>Metric units</p>
+        </div>
+      </div>
+    </div>
+
+ 
+    <p class="text-center text-xs text-white/60 mt-6">
+      Powered by OpenWeather API • Designed by Srj
+    </p>
+
   </div>
 
   <script src="index.js"></script>
