@@ -24,6 +24,8 @@ async function getWeather() {
     const data = await response.json();
     displayWeather(data);
   } catch (error) {
+    console.log(error);
+    
     resultDiv.innerHTML = `<p class="text-red-200">${error.message}</p>`;
   }
 }
